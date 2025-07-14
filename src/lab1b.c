@@ -1,4 +1,4 @@
-#include "lifegame.h"
+#include "../include/lifegame.h"
 
 /* number of generations to evolve the world */
 #define NUM_GENERATIONS 50
@@ -31,7 +31,7 @@ int main(int argc, char ** argv) {
 		next_generation();
 
 	output_world();
-	save_world_to_file("world.txt");
+	save_world_to_file("files/world.txt");
 
 	return 0;
 }

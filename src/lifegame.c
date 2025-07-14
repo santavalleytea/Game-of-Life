@@ -3,7 +3,7 @@
 #include <string.h>
 #include <errno.h>
 
-#include "lifegame.h"
+#include "../include/lifegame.h"
 
 /* hard-coded world size */
 #define WORLDWIDTH 39
@@ -48,6 +48,7 @@ void save_world_to_file(const char * filename) {
 	FILE* fp = fopen(filename, "w");
 	if (fp == NULL) {
 		fprintf(stderr, "Error: Could not open file %s\n", filename);
+		abort();
 	}
 
 	for (int y = 0; y < get_world_height(); y++) {
